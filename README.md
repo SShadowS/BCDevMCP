@@ -172,8 +172,8 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 ## Support
 
 - 📚 [Documentation](docs/)
-- 💬 [Discussions](https://github.com/your-username/BCDevMCP/discussions)
-- 🐛 [Issue Tracker](https://github.com/your-username/BCDevMCP/issues)
+- 💬 [Discussions](https://github.com/SShadowS/BCDevMCP/discussions)
+- 🐛 [Issue Tracker](https://github.com/SShadowS/BCDevMCP/issues)
 
 ## License
 
