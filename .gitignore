@@ -46,3 +46,6 @@ temp/
 
 # Project specific
 CLAUDE.md
+
+# MCP configuration - NEVER commit this file
+.mcp.json
