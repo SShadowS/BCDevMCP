@@ -1,0 +1,41 @@
+{
+  "name": "bcdev-mcp",
+  "version": "0.3.0",
+  "description": "Business Central Development MCP Server",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "prestart": "npm run build",
+    "start": "node dist/index.js",
+    "clean": "rimraf dist",
+    "typecheck": "tsc --noEmit",
+    "watch": "tsc --watch",
+    "test": "NODE_OPTIONS=\"--experimental-vm-modules\" jest",
+    "test:watch": "NODE_OPTIONS=\"--experimental-vm-modules\" jest --watch",
+    "test:coverage": "NODE_OPTIONS=\"--experimental-vm-modules\" jest --coverage"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.16.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@jest/globals": "^30.0.4",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^22.10.5",
+    "jest": "^30.0.4",
+    "rimraf": "^6.0.1",
+    "ts-jest": "^29.4.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  },
+  "keywords": [
+    "mcp",
+    "business-central",
+    "development",
+    "typescript"
+  ],
+  "author": "",
+  "license": "MIT"
+}

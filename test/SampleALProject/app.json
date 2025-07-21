@@ -1,0 +1,26 @@
+{
+  "id": "e3b0c442-98fc-11e8-9a35-a25511f2a19e",
+  "name": "Sample AL Project for Testing",
+  "publisher": "Test Publisher",
+  "version": "1.0.0.0",
+  "brief": "A sample project with warnings for testing the MCP compile tool",
+  "description": "This project intentionally contains code that generates warnings",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [],
+  "screenshots": [],
+  "idRanges": [
+    {
+      "from": 50100,
+      "to": 50149
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  }
+}
