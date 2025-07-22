@@ -36,17 +36,20 @@ BCDevMCP is a Model Context Protocol (MCP) server that bridges AI assistants wit
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/SShadowS/BCDevMCP.git
    cd BCDevMCP
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Install Business Central tools**
+
    ```bash
    # Install .NET SDK
    winget install Microsoft.DotNet.SDK.9
@@ -57,8 +60,9 @@ BCDevMCP is a Model Context Protocol (MCP) server that bridges AI assistants wit
    ```
 
 4. **Configure your AI assistant**
-   
+
    Add to your MCP settings (e.g., Claude Desktop):
+
    ```json
    {
      "mcpServers": {
@@ -73,6 +77,7 @@ BCDevMCP is a Model Context Protocol (MCP) server that bridges AI assistants wit
 ## Tools
 
 ### 🔨 compile-app
+
 Compile Business Central AL projects with full dependency resolution.
 
 ```typescript
@@ -84,7 +89,8 @@ Compile Business Central AL projects with full dependency resolution.
 }
 ```
 
-### 📤 publish-app
+### 📤 publish-app (WIP)
+
 Deploy compiled apps to Business Central environments.
 
 ```typescript
@@ -96,7 +102,8 @@ Deploy compiled apps to Business Central environments.
 }
 ```
 
-### 📥 download-symbols
+### 📥 download-symbols (WIP)
+
 Download symbol packages from Business Central servers.
 
 ```typescript
@@ -108,7 +115,8 @@ Download symbol packages from Business Central servers.
 }
 ```
 
-### 🎯 generate-al
+### 🎯 generate-al (WIP)
+
 Generate AL code from templates for tables, pages, codeunits, and more.
 
 ```typescript
@@ -137,17 +145,20 @@ graph LR
 ## Development
 
 ### Building from source
+
 ```bash
 npm run build
 ```
 
 ### Running tests
+
 ```bash
 npm test
 ```
 
 ### Project Structure
-```
+
+```graph
 BCDevMCP/
 ├── src/
 │   ├── index.ts           # MCP server entry point
