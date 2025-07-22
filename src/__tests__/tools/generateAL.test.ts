@@ -1,16 +1,21 @@
 import { jest } from '@jest/globals';
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
-import { registerGenerateALTool } from '../../tools/generateAL.js';
-import { writeFile, mkdir } from 'fs/promises';
 
 // Mock fs/promises
-jest.mock('fs/promises');
+const mockWriteFile = jest.fn();
+const mockMkdir = jest.fn();
+
+jest.unstable_mockModule('fs/promises', () => ({
+  writeFile: mockWriteFile,
+  mkdir: mockMkdir
+}));
+
+// Import after mocking
+const { registerGenerateALTool } = await import('../../tools/generateAL.js');
 
 describe('generateAL tool', () => {
   let server: McpServer;
   let registeredTool: any;
-  const mockWriteFile = writeFile as jest.MockedFunction<typeof writeFile>;
-  const mockMkdir = mkdir as jest.MockedFunction<typeof mkdir>;
 
   beforeEach(() => {
     jest.clearAllMocks();

@@ -44,8 +44,11 @@ coverage/
 tmp/
 temp/
 
-# Project specific
-CLAUDE.md
+# Hidden directories and files
+.*
+!.gitignore
+!.github
 
-# MCP configuration - NEVER commit this file
-.mcp.json
+# Uppercase markdown files (except README)
+[A-Z]*.md
+!README.md

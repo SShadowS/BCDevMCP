@@ -1,18 +1,21 @@
 import { jest } from '@jest/globals';
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
-import { registerCompileAppTool } from '../../tools/compileApp.js';
 
 // Create mock ALCompilerAdapter
 const mockGetInstance = jest.fn();
 const mockGetCompilerInfo = jest.fn();
-const mockCompile = jest.fn<any>();
+const mockCompile = jest.fn();
+const mockInitialize = jest.fn();
 
 // Mock the module before importing
-jest.mock('../../adapters/ALCompilerAdapter.js', () => ({
+jest.unstable_mockModule('../../adapters/ALCompilerAdapter.js', () => ({
   ALCompilerAdapter: {
     getInstance: mockGetInstance
   }
 }));
+
+// Import after mocking
+const { registerCompileAppTool } = await import('../../tools/compileApp.js');
 
 describe('compileApp tool', () => {
   let server: McpServer;
@@ -26,7 +29,7 @@ describe('compileApp tool', () => {
     mockAdapter = {
       getCompilerInfo: mockGetCompilerInfo,
       compile: mockCompile,
-      initialize: jest.fn()
+      initialize: mockInitialize
     };
 
     // Set up getInstance to return mock adapter
